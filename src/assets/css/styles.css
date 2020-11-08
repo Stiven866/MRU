@@ -1,0 +1,42 @@
+.sidebar .nav > li.active-pro {
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+}
+.sidebar .nav > li.active-pro a {
+  background: rgba(255, 255, 255, 0.14);
+  opacity: 1;
+  color: #ffffff;
+}
+
+#vehiculo {
+  background: rgba(56, 56, 56, 0.8);
+  margin-top: 100%;
+  margin-left: 0%;
+}
+
+.fondo-moto {
+  height: 200px;
+}
+
+.moto {
+  margin-top: 80px;
+  height: 80px;
+}
+
+@media only screen and (max-width: 600px) {
+  .fondo-moto {
+    height: 100px;
+  }
+  .moto {
+    margin-top: 40px;
+    height: 40px;
+  }
+}
+
+.fondo {
+  background: url(../img/fondo.jpg) repeat-x center;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
