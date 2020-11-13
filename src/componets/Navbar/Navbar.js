@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 
 import Logo from "../../assets/img/movimiento-rectilineo-uniforme.jpg";
 
-const Example = (props) => {
+const NavbarComponent = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -46,4 +46,4 @@ const Example = (props) => {
   );
 };
 
-export default Example;
+export default NavbarComponent;

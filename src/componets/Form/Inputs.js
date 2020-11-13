@@ -3,9 +3,12 @@ import { Container, Row, Col, Button } from "reactstrap";
 import { Form, FormGroup, Label, Input } from "reactstrap";
 
 export default function Inputs(props) {
-  const { onInputChange } = props;
   const [vel, setVel] = useState(0);
   const [time, setTime] = useState(0);
+
+  const handleOnClick = () => {
+    props.handleChanges(vel, time);
+  };
 
   function handleChange(event) {
     if (event.target.name === "velocidad") {
@@ -19,7 +22,7 @@ export default function Inputs(props) {
     <Container>
       <Form>
         <Row form>
-          <Col md={{ offset: 3, size: 3 }}>
+          <Col md={{ offset: 2, size: 3 }}>
             <FormGroup>
               <Label for="velocidad">Velocidad (m)</Label>
               <Input
@@ -43,14 +46,15 @@ export default function Inputs(props) {
               />
             </FormGroup>
           </Col>
+          <Col>
+            <p>
+              distancia = velocidad * tiempo ({vel}* {time} = {vel * time})
+            </p>
+          </Col>
         </Row>
         <Row>
-          <Col md={{ offset: 3, size: 6 }}>
-            <Button
-              block
-              color="success"
-              onClick={() => onInputChange(vel, time)}
-            >
+          <Col md={{ offset: 2, size: 6 }}>
+            <Button block color="success" onClick={handleOnClick}>
               Simular
             </Button>
           </Col>

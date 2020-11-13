@@ -6,11 +6,19 @@ export default function ChartLine(props) {
   const [time, setTime] = useState(0);
 
   const name = props.name;
+  /*if (name === "Distancia") {
+    yinit = 0;
+  } else if (name == "Velicidad") {
+    yinit = vel;
+  } else {
+    yinit = null;
+  }*/
   const yinit = name === "Distancia" ? 0 : name === "Velocidad" ? vel : null;
   const yfin =
     name === "Distancia" ? vel * time : name === "Velocidad" ? vel : null;
+
   const data = {
-    labels: [0, time],
+    labels: ["0s", time + "s"],
     datasets: [
       {
         label: name,
